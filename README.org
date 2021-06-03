@@ -1,0 +1,41 @@
+* Justdialer
+JustDial is a local service listing site , the following scripts make it possible to web-scrape large amounts of data , spanning multiple categories and cities.
+
+This project is a modification and improvement upon [[https://github.com/harsh4870/Justdail-scrapper][this]] project , most of the source code and inspiration is taken from it.
+
+The following scripts retreive the following information for now.
+
+  1. extract phone number
+  2. extract name
+  3. extract address
+  4. extract rating
+  5. extract rating_count
+
+*** Installation
+
+Following dependencies have to be satisfied , the only external packages are requests and beautifulsoup , others are part of Python's installation.
+
+#+begin_src shell
+pip install --user beautifulsoup4
+pip install --user requests
+#+end_src
+
+Clone the repository using git or download zip file.It is just a simple python script.
+
+
+*** Running the scraper
+We need to provide two files to the script , the input.csv and citites.
+
+The cities file contains list of cities, to query, keep in mind , the city must exist within JustDial's database.
+Wrong city names , means wrong data will come out.
+
+The second file is input.csv , this contains , service links and filename for those services.And example is provided.
+Keep in mind , the city field must be substituted with {} , for reference , see the example
+
+
+Then call the script by
+
+#+begin_src shell
+python3 main.py input.csv cities
+#+end_src
+
