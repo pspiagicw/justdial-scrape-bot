@@ -39,3 +39,9 @@ Then call the script by
 python3 main.py input.csv cities
 #+end_src
 
+*** Output and Errors
+The script outputs the data in a dedicated *output* directory . You have to /manually create the directory/
+
+The script automatically waits for network request , so network problem as mitigated.
+If any error is raised , script automatically moves to next city.
+
